@@ -161,5 +161,3 @@ while numero <= n:  # Mientras numero sea menor o igual a N
     print(numero)  # Imprime el número primo
 
   numero += 1 # Incrementa numero en 1 para comprobar el siguiente
-
-# ? Minuto 2:58:01

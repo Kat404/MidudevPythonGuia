@@ -10,52 +10,52 @@ os.system("cls")  # ! Limpia la pantalla de la consola (en Windows)
 print("\nBucles for:")
 
 # Iterar una lista
-frutas = ["manzana", "banana", "pera"]
-for fruta in frutas:
-    print(fruta)
+frutas = ["manzana", "banana", "pera"]  # Lista de frutas
+for fruta in frutas:  # Itera sobre cada fruta en la lista
+    print(fruta)  # Imprime la fruta actual
 
 # Iterar sobre cualquier cosa que sea iterable
-cadena = "Python"
-for caracter in cadena:
-    print(caracter)
+cadena = "Python"  # Cadena de texto
+for caracter in cadena:  # Itera sobre cada carácter en la cadena
+    print(caracter)  # Imprime el carácter actual
 
 # enumerate()
-frutas = ["manzana", "banana", "pera"]
-for index, fruta in enumerate(frutas):
-    print(f"El índice es: {index} y la fruta es: {fruta}.")
+frutas = ["manzana", "banana", "pera"]  # Lista de frutas
+for index, fruta in enumerate(frutas):  # Itera con índice y valor usando enumerate
+    print(f"El índice es: {index} y la fruta es: {fruta}.")  # Imprime el índice y la fruta actual
 
 # Bucles anidados
-letras = ["A", "B", "C"]
-numeros = [1, 2, 3]
+letras = ["A", "B", "C"]  # Lista de letras
+numeros = [1, 2, 3]  # Lista de números
 
-for letra in letras:
-    for numero in numeros:
-        print(f"-> {letra}{numero}")
+for letra in letras:  # Itera sobre cada letra
+    for numero in numeros:  # Itera sobre cada número
+        print(f"-> {letra}{numero}")  # Imprime la combinación de letra y número
 
 # break
-print("\nbreak:")
-animales = ["gato", "perro", "mono", "elefante", "vaca", "loro"]
-for idx, animal in enumerate(animales):
-    print(animal)
-    if animal == "mono":
-        print(f"El mono está escondido en el índice {idx}.")
-        break
+print("\nbreak:")  # Imprime un título para la sección de break
+animales = ["gato", "perro", "mono", "elefante", "vaca", "loro"]  # Lista de animales
+for idx, animal in enumerate(animales):  # Itera con índice y valor usando enumerate
+    print(animal)  # Imprime el animal actual
+    if animal == "mono":  # Verifica si el animal es "mono"
+        print(f"El mono está escondido en el índice {idx}.")  # Imprime el índice del "mono"
+        break  # Termina el bucle
 
 # continue
-print("\ncontinue:")
-animales = ["gato", "perro", "mono", "elefante", "vaca", "loro"]
-for idx, animal in enumerate(animales):
-    if animal == "mono": continue
-    print(animal)
+print("\ncontinue:")  # Imprime un título para la sección de continue
+animales = ["gato", "perro", "mono", "elefante", "vaca", "loro"]  # Lista de animales
+for idx, animal in enumerate(animales):  # Itera con índice y valor usando enumerate
+    if animal == "mono": continue  # Salta la iteración si el animal es "mono"
+    print(animal)  # Imprime el animal actual
 
 # Comprensión de listas (list comprehensions)
-animales = ["gato", "perro", "mono", "elefante", "vaca", "loro"]
-animales_mayus = [animal.upper() for animal in animales]
-print(animales_mayus)
+animales = ["gato", "perro", "mono", "elefante", "vaca", "loro"]  # Lista de animales
+animales_mayus = [animal.upper() for animal in animales]  # Convierte cada animal a mayúsculas
+print(animales_mayus)  # Imprime la lista de animales en mayúsculas
 
 # Muestra los números pares de una línea
-pares = [num for num in [1, 2, 3, 4, 5, 6] if num % 2 == 0]
-print(pares)
+pares = [num for num in [1, 2, 3, 4, 5, 6] if num % 2 == 0]  # Filtra los números pares de la lista
+print(pares)  # Imprime la lista de números pares
 
 
 ###
