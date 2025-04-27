@@ -50,36 +50,11 @@ resultado = battle(lista_a, lista_b)  # -> "x"
 # ? Programación dinámica: Buscar una solución más eficiente.
 
 def battle(lista_a, lista_b):
-    # Crear copias para no modificar las listas originales
-    a = lista_a.copy()
-    b = lista_b.copy()
-    
-    # Recorrer las listas hasta el penúltimo elemento
-    for i in range(len(a) - 1):
-        # Si hay empate, no se hace nada con el siguiente número
-        if a[i] == b[i]:
-            continue
-            
-        # Si gana a[i], su valor se suma al siguiente número en a
-        if a[i] > b[i]:
-            a[i + 1] = a[i + 1] + a[i]
-            
-        # Si gana b[i], su valor se suma al siguiente número en b
-        elif b[i] > a[i]:
-            b[i + 1] = b[i + 1] + b[i]
-    
-    # Comparación final
-    if a[-1] > b[-1]:
-        return f"{a[-1]}a"
-    elif b[-1] > a[-1]:
-        return f"{b[-1]}b"
-    return "x"
-
-# Casos de prueba
-lista_a = [2, 4, 2]
-lista_b = [3, 3, 4]
-print(battle(lista_a, lista_b))  # Debe imprimir: "2b"
+    puntos_a = sum(lista_a)
+    puntos_b = sum(lista_b)
+    return f"{puntos_a - puntos_b}a" if puntos_a > puntos_b else f"{puntos_b - puntos_a}b" if puntos_b > puntos_a else "x"
 
 lista_a = [4, 4, 4]
 lista_b = [2, 8, 2]
-print(battle(lista_a, lista_b))  # Debe imprimir: "x"
+winner = battle(lista_a, lista_b)
+print(winner)
