@@ -50,11 +50,21 @@ resultado = battle(lista_a, lista_b)  # -> "x"
 # ? Programación dinámica: Buscar una solución más eficiente.
 
 def battle(lista_a, lista_b):
+    # Calcula la suma de todos los elementos en lista_a y la almacena en la variable puntos_a
     puntos_a = sum(lista_a)
+    # Calcula la suma de todos los elementos en lista_b y la almacena en la variable puntos_b
     puntos_b = sum(lista_b)
+    # Compara puntos_a y puntos_b para determinar el ganador
+    # Si puntos_a es mayor que puntos_b, devuelve la diferencia seguida de "a"
+    # Si puntos_b es mayor que puntos_a, devuelve la diferencia seguida de "b"
+    # Si son iguales, devuelve "x"
     return f"{puntos_a - puntos_b}a" if puntos_a > puntos_b else f"{puntos_b - puntos_a}b" if puntos_b > puntos_a else "x"
 
+# Define la lista lista_a con los valores [4, 4, 4]
 lista_a = [4, 4, 4]
+# Define la lista lista_b con los valores [2, 8, 2]
 lista_b = [2, 8, 2]
+# Llama a la función battle con lista_a y lista_b, y guarda el resultado en la variable winner
 winner = battle(lista_a, lista_b)
+# Imprime el valor de la variable winner en la consola
 print(winner)
