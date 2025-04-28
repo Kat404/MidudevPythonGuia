@@ -87,4 +87,63 @@ for match in matches_midu:
     # Imprimimos el texto encontrado y sus posiciones de inicio y fin
     print(match.group(), match.start(), match.end())
 
-# ? Minuto 5:05:20
+# ----------------------------------------------------------------------------------------------------------------------
+print("\n")
+# * Modificadores
+# * Los modificadores son opciones que se pueden agregar a un patrón para cambiar su comportamiento.
+# * re.IGNORECASE: Ignora las mayúsculas y minúsculas al buscar.
+
+text = "Todo el mundo dice que la IA nos va a quitar el trabajo. Pero la ia no es tan mala. ¡Viva la Ia!"
+pattern = "IA"
+
+found = re.findall(pattern, text, re.IGNORECASE) # ? El IGNORECASE hará que se ignore entre mayúsculas y minúsculas en el patrón -> texto.
+
+if found: print(found)
+if found:
+    print(f"He encontrado el patrón {found} en el texto.")
+    print(f"Se encontró {len(found)} veces.")
+else:
+    print("No he encontrado el patrón en el texto.")
+
+print("\n")
+
+# * Ejercicio 3
+# * Encuentra todas las ocurrencias de la palabra "python" en el siguiente texto, sin distinguir entre mayúsculas y minúsculas.
+text = "Este es el curso de Python de midudev. ¡Suscríbete a python si te gusta este contenido! PYTHON"
+pattern = "python"
+
+found = re.findall(pattern, text, re.IGNORECASE)
+
+if found: print(found)
+if found:
+    print(f"He encontrado el patrón {found} en el texto.")
+    print(f"Se encontró {len(found)} veces.")
+else:
+    print("No he encontrado el patrón en el texto.")
+
+print("\n")
+# ------------------------------------------------------------------------------------------------------------------------------------
+# * Reemplazar el texto
+# * .sub() reemplaza todas las coincidencias de un patrón en un texto.
+
+text = "Hola, mundo! Hola de nuevo."
+pattern = "Hola"
+replacement = "Adiós"
+
+new_text = re.sub(pattern, replacement, text)
+print(new_text)
+
+"""
+re.search
+Busca la primera coincidencia del patrón en el texto y devuelve un objeto Match (o None si no hay coincidencia). Permite obtener la posición y el texto encontrado.
+
+re.findall
+Devuelve una lista con todas las coincidencias del patrón en el texto. Solo devuelve las cadenas encontradas, no objetos Match.
+
+re.finditer
+Devuelve un iterador de objetos Match para todas las coincidencias del patrón en el texto. Permite acceder a la posición y el texto de cada coincidencia.
+
+search: primera coincidencia (objeto Match)
+findall: todas las coincidencias (lista de strings)
+finditer: todas las coincidencias (iterador de objetos Match)
+"""
