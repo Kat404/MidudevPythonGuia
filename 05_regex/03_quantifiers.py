@@ -50,6 +50,17 @@ matches = re.findall(pattern, text)  # Busca todas las coincidencias del patrón
 print(matches)
 
 # Ejercicio 3:
-# Encuntra las palabras de más de 4 letras
+# Encuentra las palabras de más de 4 a 6 letras en el siguiente texto
 words = "ala casa árbol león circo murciélago"
-pattern = r"\w{5,}"
+pattern = r"\b\w{4,6}\b"
+long_words = re.findall(pattern, words)
+print(long_words)
+
+print("\n")
+
+# Ejercicio 4:
+# Encuentra las palabras de más de 6 letras
+words = "ala fantástico casa árbol león cinco murciélago"
+pattern = r"\b\w{6,}\b"
+matches = re.findall(pattern, words)
+print(matches)

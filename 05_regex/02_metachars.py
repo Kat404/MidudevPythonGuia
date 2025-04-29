@@ -8,7 +8,7 @@ import os  # * Importamos el módulo 'os' para interactuar con el sistema operat
 import re # * Importamos el módulo 're' para interactuar con el sistema regex
 os.system("cls")  # ! Limpia la pantalla de la consola (en Windows)
 
-# * 1.- El punto (.)
+# * El punto (.)
 # * Coincidir con cualquier caracter excepto una nueva línea
 
 text = "Hola mundo, H0la de nuevo, H$la otra vez"
@@ -43,7 +43,7 @@ else:
     print("No se ha encontrado el patrón en el texto.")
 print("\n")
 
-# Cómo usar la barra invertida (\) para anular el significado especial de un símbolo.
+# * Cómo usar la barra invertida (\) para anular el significado especial de un símbolo.
 text = "Mi casa es blanca. Y el coche es negro."
 pattern = r"\." 
 # ? El punto es un valor especial ya que expresa cualquier caracter y por eso se imprime toda la frase junto con los espacios.
