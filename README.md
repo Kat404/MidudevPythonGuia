@@ -26,6 +26,7 @@ MidudevPythonGuia/
   03_loops/         # Bucles y funciones
   04_logic/         # Lógica y desafíos
   05_regex/         # Expresiones regulares
+  06_request_ai_dates/  # Fechas y tiempo
 ```
 
 ---
