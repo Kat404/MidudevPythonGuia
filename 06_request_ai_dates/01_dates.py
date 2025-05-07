@@ -35,6 +35,8 @@ print(f"Mañana: {tomorrow}")
 one_hour_after = datetime.now() + timedelta(hours=1)
 print(f"Una hora después: {one_hour_after}")
 
+print("\n")
+
 # * 5.- Obtener componentes individuales de una fecha
 year = now.year
 print(f"Año actual: {year}")
