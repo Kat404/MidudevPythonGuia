@@ -27,6 +27,7 @@ MidudevPythonGuia/
   04_logic/         # Lógica y desafíos
   05_regex/         # Expresiones regulares
   06_request_ai_dates/  # Fechas y tiempo
+  07_scraping/      # Web scraping y automatización
 ```
 
 ---
